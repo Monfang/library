@@ -34,17 +34,6 @@ body {
 #builder {
 }
 
-/*table, th, td {
-  border: 1px solid black;
-  border-collapse: collapse;
-  margin-left: auto;
-  margin-right: auto;
-}
-
-th, td {
-  padding: 15px;
-}*/
-
 table {
   width: 100%;
   border-collapse: collapse;
@@ -64,5 +53,14 @@ th {
 td, th {
   padding: 6px;
   border: 1px solid #ccc;
+
+}
+
+@media only screen and (max-width: 500px) {
+
+  body {
+    margin: 0;
+  }
+
 
 }
