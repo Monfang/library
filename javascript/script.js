@@ -16,6 +16,7 @@ function addBookToLibrary() {
   // something here
 }
 
+function dummyBooks() {
 const TheHobbit = new Book('The Hobbit', 'J.R.R Tolkien', 295, 'unread');
 myLibrary.push(TheHobbit);
 
@@ -24,6 +25,8 @@ myLibrary.push(Bridgerton);
 
 const HarryPotter = new Book('Harry Potter', 'J.K Rowling', 777, 'unread');
 myLibrary.push(HarryPotter);
+
+}
 
 //console.log("Length: " + myLibrary.length);
 
@@ -70,7 +73,11 @@ function tableHeader () {
 }
 
 function buildLibrary() {
-  if (myLibrary.length == 0) {          document.getElementById("builder").innerHTML = "Poo";
+
+  image = '<img id="image" src="images/cat.png" alt="empty library">';
+
+  if (myLibrary.length == 0) {
+    document.getElementById("builder").innerHTML = image ;
   } else {
   builder = "<table>";
   builder += tableHeader();
