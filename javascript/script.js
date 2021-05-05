@@ -16,13 +16,13 @@ function addBookToLibrary() {
   // something here
 }
 
-const TheHobbit = new Book('The Hobbit', 'J.R.R Tolkien', 295, 'not read yet');
+const TheHobbit = new Book('The Hobbit', 'J.R.R Tolkien', 295, 'unread');
 myLibrary.push(TheHobbit);
 
 const Bridgerton = new Book('Bridgerton', 'Lady Mae', 619, 'read');
 myLibrary.push(Bridgerton);
 
-const HarryPotter = new Book('Harry Potter', 'J.K Rowling', 777, 'not read yet');
+const HarryPotter = new Book('Harry Potter', 'J.K Rowling', 777, 'unread');
 myLibrary.push(HarryPotter);
 
 //console.log("Length: " + myLibrary.length);
@@ -38,7 +38,7 @@ if (i < myLibrary.length) {
   build += "<td>" + myLibrary[i].author + "</td>";
   build += "<td>" + myLibrary[i].pages + "</td>";
   build += "<td>" + myLibrary[i].read + "</td>";
-  build += "<td><button id='remove' onclick='remove(" + i + ", myLibrary);'>Remove</button></td>";
+  build += "<td><button id='remove' onclick='remove(" + i + ", myLibrary);'>REMOVE</button></td>";
   build += "</tr>";
   i++
 

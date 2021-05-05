@@ -14,12 +14,21 @@ body {
   border-radius: 5px;
 }
 
+#add:hover {
+  background-color: #fe5f55;
+}
+
 #remove {
   padding: 0.5em;
-  background-color: transparent;
-  color: #392f5a;
+  background-color: #519e8a;
+  color: #ffffff;
   border: 0px;
-  font-size: 16px;
+  border-radius: 5px;
+  font-size: 12px;
+}
+
+#remove:hover {
+  background-color: #476a6f;
 }
 
 #builder {
