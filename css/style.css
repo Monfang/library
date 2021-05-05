@@ -1,13 +1,10 @@
-/* global */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #eef3a6;
   text-align: center;
   color: #392f5a;
-  padding: 0;
 }
 
-/* body */
 #add {
   padding: 0.5em;
   margin-bottom: 1em;
