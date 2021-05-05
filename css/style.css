@@ -1,0 +1,39 @@
+/* global */
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #eef3a6;
+  text-align: center;
+  color: #392f5a;
+}
+
+/* body */
+#add {
+  padding: 0.5em;
+  margin-bottom: 1em;
+  background-color: #ff6b6c;
+  color: white;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+#remove {
+  padding: 0.5em;
+  background-color: transparent;
+  color: #392f5a;
+  border: 0px;
+  font-size: 16px;
+}
+
+#builder {
+}
+
+table, th, td {
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+th, td {
+  padding: 15px;
+}
