@@ -4,6 +4,7 @@ body {
   background-color: #eef3a6;
   text-align: center;
   color: #392f5a;
+  padding: 0;
 }
 
 /* body */
@@ -11,8 +12,8 @@ body {
   padding: 0.5em;
   margin-bottom: 1em;
   background-color: #ff6b6c;
-  color: white;
-  border: 1px solid white;
+  color: #ffffff;
+  border: 1px solid #ffffff;
   border-radius: 5px;
 }
 
@@ -27,7 +28,7 @@ body {
 #builder {
 }
 
-table, th, td {
+/*table, th, td {
   border: 1px solid black;
   border-collapse: collapse;
   margin-left: auto;
@@ -36,4 +37,26 @@ table, th, td {
 
 th, td {
   padding: 15px;
+}*/
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  background: #ffffff;
+}
+
+tr:nth-of-type(odd) {
+  background: #eeeeee;
+}
+
+th {
+  background: #392f5a;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+td, th {
+  padding: 6px;
+  border: 1px solid #ccc;
+
 }
