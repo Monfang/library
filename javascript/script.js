@@ -96,7 +96,7 @@ if (i < myLibrary.length) {
   build += "<td>" + myLibrary[i].pages + "</td>";
     build += "<td><button id='status' onclick='changeRead(" + i + ", myLibrary);'>" + myLibrary[i].read + "</button></td>";
   //build += "<td>" + myLibrary[i].read + "</td>";
-  build += "<td><button id='remove' onclick='remove(" + i + ", myLibrary);'>Remove</button></td>";
+  build += "<td><button id='remove' onclick='remove(" + i + ", myLibrary);'>remove</button></td>";
   build += "</tr>";
   i++
 

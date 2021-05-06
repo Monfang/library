@@ -56,7 +56,18 @@ td, th {
 
 #status {
   min-width: 60px;
+  padding: 0.5em;
+  background-color: #8eb1c7;
+  color: #ffffff;
+  border: 0px;
+  border-radius: 5px;
+  font-size: 12px;
 }
+
+#status:hover {
+  background-color: #392f5a;
+}
+
 
 /* POPUP FORM CSS*/
 {box-sizing: border-box;}
@@ -65,7 +76,6 @@ td, th {
 #form-popup {
   display: none;
   position: absolute;
-  border: 3px, solid #f1f1f1;
   z-index: 9;
   top: 50%;
   left: 50%;
@@ -77,6 +87,7 @@ td, th {
   max-width: 300px;
   padding: 10px;
   background-color: #ffff;
+  border-radius: 5px;
 }
 
 /* full width input fields */
@@ -108,6 +119,7 @@ td, th {
   cursor: pointer;
   width: 100%;
   margin-bottom: 10px;
+  border-radius: 5px;
 }
 
 /* hover affects for form buttons */
@@ -119,6 +131,10 @@ td, th {
 
   body {
     margin: 0;
+  }
+
+  #add-form {
+    width: 400px;
   }
 
 }
