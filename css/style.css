@@ -4,7 +4,7 @@ body {
   background-color: #eef3a6;
   text-align: center;
   color: #392f5a;
-  touch-action: manipulation;
+  touch-action: none;
 }
 
 /* add book button */
@@ -41,25 +41,25 @@ table {
   width: 100%;
   border-collapse: collapse;
   background: #ffffff;
-  touch-action: manipulation;
+  touch-action: none;
 }
 
 tr:nth-of-type(odd) {
   background: #eeeeee;
-  touch-action: manipulation;
+  touch-action: none;
 }
 
 th {
   background: #392f5a;
   color: #ffffff;
   font-weight: bold;
-  touch-action: manipulation;
+  touch-action: none;
 }
 
 td, th {
   padding: 6px;
   border: 1px solid #ccc;
-  touch-action: manipulation;
+  touch-action: none;
 
 }
 
