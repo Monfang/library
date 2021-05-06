@@ -83,7 +83,6 @@ function dummyBooks() {
   const HarryPotter = new Book('Harry Potter', 'J.K Rowling', 777, 'unread');
   myLibrary.push(HarryPotter);
 
-  saveToLocal();
 }
 
 //console.log("Length: " + myLibrary.length);
@@ -97,7 +96,7 @@ if (i < myLibrary.length) {
   build += "<tr>";
   build += "<td>" + myLibrary[i].title + "</td>";
   build += "<td>" + myLibrary[i].author + "</td>";
-  build += "<td>" + myLibrary[i].pages + "</td>";
+  build += "<td class='hide-mobile'>" + myLibrary[i].pages + "</td>";
     build += "<td><button id='status' onclick='changeRead(" + i + ", myLibrary);'>" + myLibrary[i].read + "</button></td>";
   //build += "<td>" + myLibrary[i].read + "</td>";
   build += "<td><button id='remove' onclick='remove(" + i + ", myLibrary);'>remove</button></td>";
@@ -124,7 +123,7 @@ function tableHeader () {
   build = "<tr>";
   build += "<th>TITLE</th>";
   build += "<th>AUTHOR</th>";
-  build += "<th>PAGES</th>";
+  build += "<th class='hide-mobile'>PAGES</th>";
   build += "<th>STATUS</th>";
   build += "<th>REMOVE</th>";
   build += "</tr>";
@@ -156,5 +155,6 @@ function buildLibrary() {
   function restoreLocal() {
     myLibrary = JSON.parse(localStorage.getItem("myLibrary"));
     if (myLibrary === null) myLibrary = [];
+    dummyBooks();
     buildLibrary();
   }
