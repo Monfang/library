@@ -1,4 +1,4 @@
-let myLibrary = [];
+//let myLibrary = [];
 
 function Book(title, author, pages, read) {
   this.title= title;
@@ -33,7 +33,7 @@ function addBookToLibrary() {
   const addBook = new Book(title, author, pages, read);
 myLibrary.push(addBook);
   console.log(addBook);
-
+  saveToLocal();
   buildLibrary();
 
   let reset = document.getElementById("add-form");
@@ -61,10 +61,12 @@ function changeRead(i, myLibrary) {
 
   if (status === "read") {
     myLibrary[i].read = "unread";
+    saveToLocal();
     buildLibrary();
     return;
   } else {
     myLibrary[i].read = "read";
+    saveToLocal();
     buildLibrary();
     return;
   }
@@ -80,6 +82,8 @@ function dummyBooks() {
 
   const HarryPotter = new Book('Harry Potter', 'J.K Rowling', 777, 'unread');
   myLibrary.push(HarryPotter);
+
+  saveToLocal();
 }
 
 //console.log("Length: " + myLibrary.length);
@@ -112,6 +116,7 @@ function remove(i, myLibrary) {
   console.log(i);
   myLibrary.splice(i, 1);
   buildLibrary();
+  saveToLocal();
   return;
 }
 
@@ -140,4 +145,16 @@ function buildLibrary() {
   builder += "</table>";
         document.getElementById("builder").innerHTML = builder;
     }
+  }
+
+  // local storage
+
+  function saveToLocal() {
+    localStorage.setItem("myLibrary", JSON.stringify(myLibrary));
+  }
+
+  function restoreLocal() {
+    myLibrary = JSON.parse(localStorage.getItem("myLibrary"));
+    if (myLibrary === null) myLibrary = [];
+    buildLibrary();
   }
