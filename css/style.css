@@ -8,7 +8,7 @@ body {
 #add {
   padding: 0.5em;
   margin-bottom: 1em;
-  background-color: #ff6b6c;
+  background-color: #519e8a;
   font-size: 16px;
   color: #ffffff;
   border: 1px solid #ffffff;
@@ -16,12 +16,12 @@ body {
 }
 
 #add:hover {
-  background-color: #fe5f55;
+  background-color: #476a6f;
 }
 
 #remove {
   padding: 0.5em;
-  background-color: #519e8a;
+  background-color: #ff6b6c;
   color: #ffffff;
   border: 0px;
   border-radius: 5px;
@@ -29,10 +29,7 @@ body {
 }
 
 #remove:hover {
-  background-color: #476a6f;
-}
-
-#builder {
+  background-color: #fe5f55;
 }
 
 table {
@@ -55,6 +52,67 @@ td, th {
   padding: 6px;
   border: 1px solid #ccc;
 
+}
+
+#status {
+  min-width: 60px;
+}
+
+/* POPUP FORM CSS*/
+{box-sizing: border-box;}
+
+/* popup form - hidden by default */
+#form-popup {
+  display: none;
+  position: absolute;
+  border: 3px, solid #f1f1f1;
+  z-index: 9;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* style to the form container */
+#add-form {
+  max-width: 300px;
+  padding: 10px;
+  background-color: #ffff;
+}
+
+/* full width input fields */
+#add-form input {
+  width: 90%;
+  padding: 10px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* full width input fields */
+#add-form input[type=radio] {
+  width: 10%;
+}
+
+/* when input gets into focus */
+#add-form input:focus {
+  background-color: #dddddd;
+  outline: none;
+}
+
+/* style for submit / cancel button */
+#add-form .btn {
+  background-color: #519e8a;
+  color: #ffffff;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* hover affects for form buttons */
+#add-form .btn:hover {
+  background-color: #476a6f;
 }
 
 @media only screen and (max-width: 500px) {

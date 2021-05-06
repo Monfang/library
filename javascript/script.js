@@ -13,19 +13,73 @@ function Book(title, author, pages, read) {
 //console.log(TheHobbit.info());
 
 function addBookToLibrary() {
-  // something here
+  let form = document.getElementById('add-form');
+  let title = form.elements['title'].value;
+  console.log(title);
+  let author = form.elements['author'].value;
+  console.log(author);
+  let pages = form.elements['pages'].value;
+  console.log(pages);
+  let read = form.elements['read'].value;
+  console.log(read);
+
+  if ((title == "") || (author == "") || (pages == "") || (read == "")) {
+    document.getElementById("error").innerHTML = "Please complete your entry";
+
+    return;
+  } else {
+   document.getElementById("form-popup").style.display = "none";
+
+  const addBook = new Book(title, author, pages, read);
+myLibrary.push(addBook);
+  console.log(addBook);
+
+  buildLibrary();
+
+  let reset = document.getElementById("add-form");
+  reset.reset();
+
+    }
+}
+
+function openForm() {
+  document.getElementById("form-popup").style.display = "block";
+}
+
+function closeForm() {
+  document.getElementById("form-popup").style.display = "none";
+
+  let reset = document.getElementById("add-form");
+  reset.reset();
+
+}
+
+function changeRead(i, myLibrary) {
+
+  let status = myLibrary[i].read;
+  console.log(status);
+
+  if (status === "read") {
+    myLibrary[i].read = "unread";
+    buildLibrary();
+    return;
+  } else {
+    myLibrary[i].read = "read";
+    buildLibrary();
+    return;
+  }
+
 }
 
 function dummyBooks() {
-const TheHobbit = new Book('The Hobbit', 'J.R.R Tolkien', 295, 'unread');
-myLibrary.push(TheHobbit);
+  const TheHobbit = new Book('The Hobbit', 'J.R.R Tolkien', 295, 'unread');
+  myLibrary.push(TheHobbit);
 
-const Bridgerton = new Book('Bridgerton', 'Lady Mae', 619, 'read');
-myLibrary.push(Bridgerton);
+  const Bridgerton = new Book('Bridgerton', 'Lady Mae', 619, 'read');
+  myLibrary.push(Bridgerton);
 
-const HarryPotter = new Book('Harry Potter', 'J.K Rowling', 777, 'unread');
-myLibrary.push(HarryPotter);
-
+  const HarryPotter = new Book('Harry Potter', 'J.K Rowling', 777, 'unread');
+  myLibrary.push(HarryPotter);
 }
 
 //console.log("Length: " + myLibrary.length);
@@ -40,8 +94,9 @@ if (i < myLibrary.length) {
   build += "<td>" + myLibrary[i].title + "</td>";
   build += "<td>" + myLibrary[i].author + "</td>";
   build += "<td>" + myLibrary[i].pages + "</td>";
-  build += "<td>" + myLibrary[i].read + "</td>";
-  build += "<td><button id='remove' onclick='remove(" + i + ", myLibrary);'>REMOVE</button></td>";
+    build += "<td><button id='status' onclick='changeRead(" + i + ", myLibrary);'>" + myLibrary[i].read + "</button></td>";
+  //build += "<td>" + myLibrary[i].read + "</td>";
+  build += "<td><button id='remove' onclick='remove(" + i + ", myLibrary);'>Remove</button></td>";
   build += "</tr>";
   i++
 
@@ -65,7 +120,7 @@ function tableHeader () {
   build += "<th>TITLE</th>";
   build += "<th>AUTHOR</th>";
   build += "<th>PAGES</th>";
-  build += "<th>READ</th>";
+  build += "<th>STATUS</th>";
   build += "<th>REMOVE</th>";
   build += "</tr>";
 

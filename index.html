@@ -17,7 +17,8 @@
   <body onload="dummyBooks(); buildLibrary();">
     <div>
       <h1>Library</h1>
-      <button id="add">ADD BOOK</button>
+      <button id="add" onclick="openForm()">ADD BOOK</button>
+  </div>
     </div>
 
     <div id="form-popup">
@@ -34,8 +35,8 @@
         <input type="radio" name="read" value="unread">
         <label for="unread">Unread</label><br>
         <div id="error"></div>
-        <input type="submit" class="btn" onclick="return addBookToLibrary()" value="Add Book">
-        <input type="submit" class="btn" value="Cancel">
+        <input type="submit" class="btn" onclick="return addBookToLibrary()" value="ADD BOOK">
+        <input type="submit" class="btn" onclick="closeForm()" value="CANCEL">
       </form>
     </div>
 
