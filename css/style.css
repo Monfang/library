@@ -1,11 +1,13 @@
-/* global font background and align */
+/* Global font background and align */
 body {
   font-family: 'Roboto', sans-serif;
   background-color: #eef3a6;
   text-align: center;
   color: #392f5a;
+  touch-action: manipulation;
 }
 
+/* add book button */
 #add {
   padding: 0.5em;
   margin-bottom: 1em;
@@ -20,6 +22,7 @@ body {
   background-color: #476a6f;
 }
 
+/* remove button */
 #remove {
   padding: 0.5em;
   background-color: #ff6b6c;
@@ -33,6 +36,7 @@ body {
   background-color: #fe5f55;
 }
 
+/* table styles */
 table {
   width: 100%;
   border-collapse: collapse;
@@ -55,6 +59,7 @@ td, th {
 
 }
 
+/* read status toggle button */
 #status {
   min-width: 60px;
   padding: 0.5em;
@@ -70,10 +75,10 @@ td, th {
 }
 
 
-/* POPUP FORM CSS*/
+/* Popup form css */
 {box-sizing: border-box;}
 
-/* popup form - hidden by default */
+/* popup form (hidden by default) */
 #form-popup {
   display: none;
   position: absolute;
@@ -83,7 +88,7 @@ td, th {
   transform: translate(-50%, -50%);
 }
 
-/* style to the form container */
+/* form container styles */
 #add-form {
   max-width: 300px;
   padding: 10px;
@@ -91,7 +96,7 @@ td, th {
   border-radius: 5px;
 }
 
-/* full width input fields */
+/* input field styles */
 #add-form input {
   width: 90%;
   padding: 10px;
@@ -100,18 +105,18 @@ td, th {
   background: #f1f1f1;
 }
 
-/* full width input fields */
+/* radio input field styles */
 #add-form input[type=radio] {
   width: 10%;
 }
 
-/* when input gets into focus */
+/* input field when in focus */
 #add-form input:focus {
   background-color: #dddddd;
   outline: none;
 }
 
-/* style for submit / cancel button */
+/* input button styles */
 #add-form .btn {
   background-color: #519e8a;
   color: #ffffff;
@@ -125,11 +130,11 @@ td, th {
   border-radius: 5px;
 }
 
-/* hover affects for form buttons */
 #add-form .btn:hover {
   background-color: #476a6f;
 }
 
+/* Mobile device styles */
 @media only screen and (max-width: 500px) {
 
   body {
