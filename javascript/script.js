@@ -155,6 +155,5 @@ function buildLibrary() {
   function restoreLocal() {
     myLibrary = JSON.parse(localStorage.getItem("myLibrary"));
     if (myLibrary === null) myLibrary = [];
-    dummyBooks();
     buildLibrary();
   }
