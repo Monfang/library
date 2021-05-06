@@ -41,21 +41,25 @@ table {
   width: 100%;
   border-collapse: collapse;
   background: #ffffff;
+  touch-action: manipulation;
 }
 
 tr:nth-of-type(odd) {
   background: #eeeeee;
+  touch-action: manipulation;
 }
 
 th {
   background: #392f5a;
   color: #ffffff;
   font-weight: bold;
+  touch-action: manipulation;
 }
 
 td, th {
   padding: 6px;
   border: 1px solid #ccc;
+  touch-action: manipulation;
 
 }
 
@@ -68,7 +72,6 @@ td, th {
   border: 0px;
   border-radius: 5px;
   font-size: 12px;
-  touch-action: manipulation;
 }
 
 #status:hover {
