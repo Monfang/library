@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <title>Library</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0">
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="css/style.css">
@@ -16,11 +16,12 @@
   </head>
   <body onload="restoreLocal();">
     <div>
+      <!-- heading -->
       <h1>Library</h1>
+      <!-- add book button which brings up book input form -->
       <button id="add" onclick="openForm()">ADD BOOK</button>
-  </div>
     </div>
-
+    <!-- book input form, on default display: none -->
     <div id="form-popup">
       <form id="add-form" onsubmit="return false" target="_self">
         <label for="title">Title</label>
@@ -39,9 +40,8 @@
         <input type="submit" class="btn" onclick="closeForm()" value="CANCEL">
       </form>
     </div>
-
+    <!-- div which houses the library when it is built -->
     <div id="builder"></div>
-
 
     <!-- JavaScript -->
     <script type="text/javascript" src="javascript/script.js"></script>
